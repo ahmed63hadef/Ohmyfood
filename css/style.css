@@ -17,6 +17,16 @@ header img {
   margin: 20px 0 20px 0;
   max-width: 200px;
 }
+i,
+h3 {
+  padding: 10px 15px;
+}
+i,
+h3,
+p {
+  font-weight: 400;
+  font-size: 1em;
+}
 .localisation {
   display: flex;
   justify-content: center;
@@ -38,10 +48,10 @@ header img {
   padding: 40px 20px;
 }
 
-.titre-principal h1 {
+h1 {
   font-weight: 500;
 }
-.titre-principal h2 {
+h2 {
   font-weight: 300;
   font-size: medium;
 }
@@ -55,4 +65,60 @@ header img {
   color: white;
   font-size: large;
   cursor: pointer;
+}
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 20px;
+  gap: 20px;
+}
+.fonctionnement-etapes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  font-weight: 500;
+}
+.fonctionnement-etapes p {
+  z-index: 1;
+  position: absolute;
+  color: white;
+  background: #9356dc;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+.titre-etape {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #f7f7f7;
+  padding: 20px;
+  min-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 5px lightgrey;
+  margin-left: 15px;
+  width: 80vw;
+}
+.restaurants {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: #f7f7f7;
+  gap: 20px;
+  padding: 40px 20px;
+}
+.restaurants img {
+  object-fit: cover;
+  width: 90vw;
+  border-radius: 20px 20px 0 0;
+  height: 150px;
+  width: 100%;
+}
+.restaurants div {
+  background: white;
+  box-shadow: 0px 5px 5px lightgrey;
+  border-radius: 20px;
+}
+.card-restaurant {
 }
