@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Roboto";
 }
 
 header {
@@ -20,4 +22,37 @@ header img {
   justify-content: center;
   padding: 20px 0;
   background-color: #eaeaea;
+  font-family: "Roboto";
+  font-weight: 500;
+  gap: 10px;
+}
+.titre-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: #f7f7f7;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.titre-principal h1 {
+  font-weight: 500;
+}
+.titre-principal h2 {
+  font-weight: 300;
+  font-size: medium;
+}
+.titre-principal button {
+  background: linear-gradient(170deg, #ff79da, #9356dc);
+  padding: 20px 30px;
+  max-width: 300px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 4px 4px 2px lightgrey;
+  color: white;
+  font-size: large;
+  cursor: pointer;
 }
