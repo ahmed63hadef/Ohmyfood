@@ -7,14 +7,13 @@
 }
 
 header {
-  display: flex;
-  justify-content: center;
-  box-shadow: 0px 5px 5px lightgrey;
   margin-bottom: 5px;
+  padding: 20px;
 }
 
 header img {
-  margin: 20px 0 20px 0;
+  display: block;
+  margin: auto;
   max-width: 200px;
 }
 i,
@@ -71,12 +70,19 @@ footer ul li {
   list-style-type: none;
   margin-bottom: 10px;
 }
-
+footer p {
+  font-size: smaller;
+}
+footer i {
+  width: 32px;
+}
 .localisation {
   display: flex;
   justify-content: center;
   padding: 20px 0;
   background-color: #eaeaea;
+  box-shadow: inset 0px 5px 5px #cdcccc;
+
   font-family: "Roboto";
   font-weight: 500;
   gap: 10px;
@@ -173,4 +179,33 @@ footer ul li {
 .proposer-restaurant i,
 .devenir-partenaire i {
   padding: 0 17px 0 0;
+}
+.header-pages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.identite-restaurant {
+  background: #f7f7f7;
+}
+.identite-restaurant img {
+  object-fit: cover;
+  width: 100vw;
+  z-index: 2;
+}
+
+.identite-restaurant div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  z-index: 1;
+  transform: translateY(-75px);
+  border-radius: 50px 50px 0 0;
+  background: #f7f7f7;
+  margin-bottom: -50px;
+}
+.identite-restaurant h1 {
+  font-family: "Shrikhand";
+  font-size: 2em;
 }
