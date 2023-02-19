@@ -39,6 +39,8 @@ h5 {
 
 h1 {
   font-weight: 500;
+  margin-top: 10px;
+  padding: 20px;
 }
 h2 {
   font-weight: 300;
@@ -120,6 +122,11 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.groupe-fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 20px 20px;
   gap: 20px;
 }
@@ -148,7 +155,7 @@ button {
   border-radius: 20px;
   box-shadow: 0px 5px 5px lightgrey;
   margin-left: 15px;
-  width: 80vw;
+  width: 90vw;
 }
 .restaurants {
   display: flex;
@@ -268,4 +275,66 @@ button {
 
 .bouton-commander button {
   padding: 20px 70px;
+}
+
+@media screen and (min-width: 900px) {
+  .groupe-fonctionnement {
+    flex-direction: row;
+    padding: 20px 0px;
+    gap: 10px;
+  }
+  .fonctionnement {
+    display: block;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .fonctionnement h1 {
+    margin-left: 100px;
+  }
+  .fonctionnement-etapes {
+    gap: 0;
+  }
+  .titre-etape {
+    padding: 20px 1px 19px 5px;
+
+    min-width: 200px;
+    width: inherit;
+  }
+  .restaurants h1 {
+    margin-left: 80px;
+  }
+  .restaurants {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .card-restaurant {
+    min-width: 350px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+  }
+  footer ul {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    gap: 30px;
+  }
+  footer h6 {
+    margin-bottom: 12px;
+  }
+  .identite-restaurant div,
+  .menu {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+  .identite-restaurant {
+    background: none;
+    margin-bottom: -76px;
+  }
 }
