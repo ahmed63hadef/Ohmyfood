@@ -118,6 +118,7 @@ button {
   font-size: large;
   cursor: pointer;
 }
+
 .fonctionnement {
   display: flex;
   flex-direction: column;
@@ -220,7 +221,7 @@ button {
 }
 .identite-restaurant h1 {
   font-family: "Shrikhand";
-  font-size: 1, 5em;
+  font-size: 135%;
 }
 .menu {
   background: #f7f7f7;
@@ -278,6 +279,18 @@ button {
   padding: 20px 70px;
 }
 
+/* animations   */
+
+.bouton-menu :hover {
+  transform: scale(1.03);
+  transition: all 500ms ease 0s;
+}
+
+.fonctionnement-etapes :hover {
+  background: black;
+  box-shadow: 0px 5px 4px 5px lightgrey;
+}
+
 @media screen and (min-width: 900px) {
   .groupe-fonctionnement {
     flex-direction: row;
@@ -308,6 +321,10 @@ button {
     flex-direction: row;
     overflow: scroll;
     padding-left: 110px;
+    gap: 50px;
+  }
+  .restaurants h1 {
+    padding: 0;
   }
   .card-restaurant {
     min-width: 350px;
