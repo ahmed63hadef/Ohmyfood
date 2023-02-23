@@ -355,7 +355,7 @@ button:hover {
 .bloc-plat:hover .plat {
   margin-right: 90px;
   border-radius: 20px 0 0 20px;
-  transition-duration: all 400ms;
+  transition-duration: 400ms;
   transition-timing-function: linear;
 }
 .check:hover {
