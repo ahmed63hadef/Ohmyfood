@@ -5,7 +5,6 @@
   padding: 0;
   font-family: "Roboto";
 }
-
 header {
   margin-bottom: 5px;
   padding: 20px;
@@ -16,7 +15,6 @@ header img {
   margin: auto;
   max-width: 200px;
 }
-i,
 h3 {
   padding: 10px 15px;
 }
@@ -58,16 +56,23 @@ h6 {
   font-size: 1em;
   margin-bottom: 20px;
 }
-i {
-  font-weight: lighter;
-  font-size: 20px;
-  font-size: medium;
-}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
+button {
+  background: linear-gradient(170deg, #ff79da, #9356dc);
+  padding: 20px 30px;
+  max-width: 300px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 4px 4px 2px lightgrey;
+  color: white;
+  font-size: large;
+  cursor: pointer;
+}
 footer {
   background: #353535;
   color: white;
@@ -105,18 +110,6 @@ footer i {
   background: #f7f7f7;
   gap: 20px;
   padding: 40px 20px;
-}
-
-button {
-  background: linear-gradient(170deg, #ff79da, #9356dc);
-  padding: 20px 30px;
-  max-width: 300px;
-  border-radius: 50px;
-  border: none;
-  box-shadow: 4px 4px 2px lightgrey;
-  color: white;
-  font-size: large;
-  cursor: pointer;
 }
 
 .fonctionnement {
@@ -195,29 +188,62 @@ button {
 .devenir-partenaire i {
   padding: 0 17px 0 0;
 }
+.card-restaurant {
+  position: relative;
+}
+.nouveau {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  padding: 5px;
+  z-index: 1;
+  color: #008766;
+  background-color: #99e2d0;
+}
+.like {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em;
+  font-size: xx-large;
+  cursor: pointer;
+}
+.like :nth-child(2) {
+  color: transparent;
+  transition: all 350ms;
+  padding: 0px;
+}
 .header-pages {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.identite-restaurant {
+.identite-restaurant,
+.image-fond {
   background: #f7f7f7;
 }
-.identite-restaurant img {
+.image-fond img {
   object-fit: cover;
   width: 100vw;
   max-height: 300px;
+  z-index: 1;
 }
-
+.identite-restaurant {
+  margin-top: -20px;
+  border-radius: 20px 20px 0 0;
+  z-index: 6;
+}
 .identite-restaurant div {
   display: flex;
   align-items: center;
+  position: relative;
   justify-content: space-between;
   padding: 30px 30px 5px 30px;
-  transform: translateY(-75px);
   border-radius: 50px 50px 0 0;
   background: #f7f7f7;
-  margin-bottom: -50px;
+  margin-top: -50px;
 }
 .identite-restaurant h1 {
   font-family: "Shrikhand";
@@ -237,12 +263,20 @@ button {
   height: 2px;
   background-color: #99e2d0;
 }
+.bloc-plat {
+  position: relative;
+  display: block;
+  box-shadow: 0px 5px 5px lightgrey;
+  border-radius: 20px;
+}
 .plat {
   display: flex;
   flex-direction: column;
   background: white;
+  position: relative;
+  z-index: 4;
   border-radius: 20px;
-  box-shadow: 0px 5px 5px lightgrey;
+  transition: 400ms;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -278,19 +312,79 @@ button {
 .bouton-commander button {
   padding: 20px 70px;
 }
-
-/* animations   */
-
-.bouton-menu :hover {
-  transform: scale(1.03);
-  transition: all 500ms ease 0s;
+.check {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  padding: 29px 40px;
+  color: #f6f6f6;
+  background-color: #99e2d0;
+  border-radius: 0 20px 20px 0;
+  box-shadow: inset 16px 0px 0px 0px #8de4ce;
+}
+.loader {
+  display: block;
 }
 
-.fonctionnement-etapes :hover {
-  background: black;
+/* animations / responsive */
+
+button:hover {
+  background: linear-gradient(
+    170deg,
+    rgba(255, 121, 218, 0.8) 0%,
+    rgba(214, 108, 219, 0.8) 39%,
+    rgba(171, 94, 220, 0.8) 85%,
+    rgba(155, 89, 220, 0.8) 100%
+  );
+  box-shadow: 8px 8px 2px #acabab;
+}
+.like :nth-child(2):hover {
+  background: linear-gradient(to bottom left, #9356dc, #ff79da);
+  font-size: large;
+  transform: scale(2);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+.titre-etape:hover {
+  background: #f5edff;
   box-shadow: 0px 5px 4px 5px lightgrey;
 }
 
+.bloc-plat:hover .plat {
+  margin-right: 90px;
+  border-radius: 20px 0 0 20px;
+  transition-duration: all 400ms;
+  transition-timing-function: linear;
+}
+.check:hover {
+  cursor: pointer;
+}
+.entrees {
+  animation: apparition 1s forwards;
+  opacity: 0;
+}
+
+.plats {
+  animation: apparition 4s forwards;
+  opacity: 0;
+}
+
+.desserts {
+  animation: apparition 6s forwards;
+  opacity: 0;
+}
+@keyframes apparition {
+  from {
+    transform: translatey(40px);
+    opacity: 0%;
+  }
+  to {
+    transform: translatey(0px);
+    opacity: 100%;
+  }
+}
 @media screen and (min-width: 900px) {
   .groupe-fonctionnement {
     flex-direction: row;
@@ -310,8 +404,7 @@ button {
     gap: 0;
   }
   .titre-etape {
-    padding: 20px 1px 19px 5px;
-
+    padding: 20px 1px 19px 18px;
     min-width: 200px;
     width: inherit;
   }
@@ -353,6 +446,6 @@ button {
   }
   .identite-restaurant {
     background: none;
-    margin-bottom: -76px;
+    margin-bottom: -8px;
   }
 }
